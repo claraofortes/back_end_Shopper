@@ -30,13 +30,13 @@ const options: swaggerJsdoc.Options = {
 
 const swaggerSpec = swaggerJsdoc(options)
 
-function swaggerDocs(app: Express, port: number){
+function swaggerDocs(app: Express, port: number, host: string){
     app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec))
     app.get('docs.json', (req: Request, res: Response) =>{
         res.setHeader('Content-Type','application/json')
         res.send(swaggerSpec)
     });
-    console.log(`Documento presente em http://localhost:${port}/docs`)
+    console.log(`Documento presente em http://${host}:${port}/docs`)
 }
 
 export default swaggerDocs;

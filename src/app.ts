@@ -16,12 +16,12 @@ class App {
   
     }
   
-    public Start = (port: number) => {
+    public Start = (port: number, host: string) => {
       return new Promise((resolve, reject) => {
   
-        this.httpServer.listen(port, () => {
+        this.httpServer.listen(port, host, () => {
             resolve(port);
-            swaggerDocs(this.httpServer, port)
+            swaggerDocs(this.httpServer, port, host)
           })
           .on('error', (err: object) => reject(err));
       })
