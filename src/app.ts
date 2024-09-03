@@ -1,5 +1,5 @@
 import express from 'express'
-import Router from './router'
+import Router from './routes'
 import * as bodyParser from 'body-parser'
 import swaggerDocs from './utils/swagger'
 
@@ -21,7 +21,7 @@ class App {
   
         this.httpServer.listen(port, host, () => {
             resolve(port);
-            swaggerDocs(this.httpServer, port, host)
+            swaggerDocs(this.httpServer, port, host);
           })
           .on('error', (err: object) => reject(err));
       })

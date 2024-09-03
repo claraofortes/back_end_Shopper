@@ -16,7 +16,9 @@
     "@types/sqlite3": "^3.1.11",
     "@types/swagger-jsdoc": "^6.0.4",
     "@types/swagger-ui-express": "^4.1.6",
+    "express-openapi-validator": "^5.3.3",
     "nodemon": "^3.1.4",
+    "openapi-typescript": "^7.3.2",
     "sqlite3": "^5.1.7",
     "swagger-autogen": "^2.23.7",
     "ts-node": "^10.9.2",
@@ -25,11 +27,14 @@
   },
   "dependencies": {
     "@google/generative-ai": "^0.17.1",
+    "@types/bcryptjs": "^2.4.6",
     "back_end_shopper": "file:",
     "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "sqlite": "^5.1.1",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1"
   }
