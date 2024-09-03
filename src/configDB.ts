@@ -2,10 +2,10 @@ import sqlite3 from 'sqlite3'
 
 const DATABASE_FILE = (process.env.DATABASE_FILE || './db.sqlite3')
 
-export const openConnection = () => {
+/*export const openConnection = () => {
     let db = new sqlite3.Database(DATABASE_FILE);
     return db;
-}
+}*/
 
 /*export const dbQueryFirst = async (query: string, params?: any[]) => {
     const retorno = await dbQuery(query, params);
